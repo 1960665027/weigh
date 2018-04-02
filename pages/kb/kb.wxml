@@ -1,0 +1,575 @@
+<!--kb.wxml-->
+<view>
+  <loading hidden="{{!hidden}}">
+    加载中...
+  </loading>
+</view>
+
+<view class="main-box">
+
+  <!--左侧节次-->
+  <view class="kb-num-ctn">
+    <view class="kb-mon kb-date">
+      <text>节</text>
+    </view>
+
+    <view class="mg-8">一</view>
+    <view class="mg-8"></view>
+
+
+    <view class="mg-8">二</view>
+    <view class="mg-8"></view>
+
+    <view class="mg-8">三</view>
+    <view class="mg-8"></view>
+
+    <view class="mg-8">四</view>
+    <view class="mg-8"></view>
+
+    <view class="mg-8">五</view>
+  </view>
+
+
+  <!--主体-->
+  <scroll-view class="kb-ctn" catchscroll="scrollXHandle" scroll-x="true" scroll-left="{{scroll.left}}">
+
+    <!--星期-->
+    <view class="kb-title blur-area">
+      <view class="kb-title-item">
+        <text>周一</text>
+      </view>
+      <view class="kb-title-item">
+        <text>周二</text>
+      </view>
+      <view class="kb-title-item">
+        <text>周三</text>
+      </view>
+      <view class="kb-title-item">
+        <text>周四</text>
+      </view>
+      <view class="kb-title-item">
+        <text>周五</text>
+      </view>
+      <view class="kb-title-item">
+        <text>周六</text>
+      </view>
+      <view class="kb-title-item">
+        <text>周日</text>
+      </view>
+    </view>
+
+    <!--卡片-->
+    <view class="kb-cards-ctn blur-area">
+
+      <!--周一-->
+      <view class="kb-cards-column" >
+
+        <!--第一节-->
+        <view class="kb-card mg-8">
+           <label wx:for="{{week1}}" wx:for-item="K11">
+          <view style="height:30px;background:#6e9ff6" wx:if="{{ K11.jcxx =='1-2' }}" class="mg-12 kb-card-content" bindtap="KP" data-room="{{ K11.skdd }}" data-kcmc="{{ K11.kcmc }}" data-js="{{ K11.rkjs }}" data-jcxx="{{K11.jcxx}}" data-skbjmc="{{K11.skbjmc}}" data-skzs="{{K11.skzs}}" data-xf="{{K11.xf}}"data-xq="{{K11.xq}}">
+           <text class="kb-card-place-words">{{ K11.kcmc }}</text>
+            <text class="kb-card-place-words">{{ K11.skdd }}</text>
+           
+            <view class="kb-card-name">
+              <text class="kb-card-name-text"></text>
+            </view>
+ 
+          </view>
+
+          <view style="height:30px" wx:elif="{{ K11.kcmc == ' '}}" class="mg-12 hidekp"></view>
+</label>
+        </view>
+
+        <!--第二节-->
+        <view class="kb-card mg-8">
+ <label wx:for="{{week1}}" wx:for-item="K12">
+          <view style="height:30px;background:#ed9ea1" wx:if="{{K12.jcxx =='3-4'}}" class="mg-12 kb-card-content" bindtap="KP" data-room="{{ K12.skdd }}" data-kcmc="{{ K12.kcmc }}" data-js="{{ K12.rkjs }}"data-jcxx="{{K12.jcxx}}" data-skbjmc="{{K12.skbjmc}}" data-skzs="{{K12.skzs}}" data-xf="{{K12.xf}}"data-xq="{{K12.xq}}">
+            <text class="kb-card-place-words">{{ K12.kcmc }}</text>
+            <text class="kb-card-place-words">{{ K12.skdd }}</text>
+            <view class="kb-card-name">
+              <text class="kb-card-name-text"></text>
+            </view>
+          </view>
+
+          <view style="height:30px" wx:elif="{{ K12.kcmc == ' '}}" class="mg-12 hidekp"></view>
+</label>
+        </view>
+
+        <!--第三节-->
+        <view class="kb-card mg-8">
+         <label wx:for="{{week1}}" wx:for-item="K13">
+          <view style="height:30px;background:#67bfe2" wx:if="{{zhouyi.jcxx =='5-6'}}" class="mg-12 kb-card-content" bindtap="KP" data-room="{{ K13.skdd }}" data-kcmc="{{ K13.kcmc }}" data-js="{{ K13.rkjs }}"data-jcxx="{{K13.jcxx}}" data-skbjmc="{{K13.skbjmc}}" data-skzs="{{K13.skzs}}" data-xf="{{K13.xf}}"data-xq="{{K13.xq}}">
+            <text class="kb-card-place-words">{{ K13.kcmc }}</text>
+            <text class="kb-card-place-words">{{ K13.skdd }}</text>
+            <view class="kb-card-name">
+              <text class="kb-card-name-text"></text>
+            </view>
+          </view>
+
+          <view style="height:30px" wx:elif="{{K13.kcmc == ' '}}" class="mg-12 hidekp"></view>
+          </label>
+        </view>
+
+        <!--第四节-->
+        <view class="kb-card mg-8">
+            <label wx:for="{{week1}}" wx:for-item="K14">
+          <view style="height:30px;background:#8caddd" wx:if="{{ zhouyi.jcxx =='7-8'}}" class="mg-12 kb-card-content" bindtap="KP" data-room="{{ K14.skdd }}" data-kcmc="{{ K14.kcmc }}" data-js="{{ K14.rkjs }}"data-jcxx="{{K14.jcxx}}" data-skbjmc="{{K14.skbjmc}}" data-skzs="{{K14.skzs}}" data-xf="{{K14.xf}}"data-xq="{{K14.xq}}">
+            <text class="kb-card-place-words">{{ K14.kcmc }}</text>
+            <text class="kb-card-place-words">{{ K14.skdd }}</text>
+            <view class="kb-card-name">
+              <text class="kb-card-name-text"></text>
+            </view>
+          </view>
+
+          <view style="height:30px" wx:elif="{{ K14.kcmc == ' '}}" class="mg-12 hidekp"></view>
+           </label>
+        </view>
+
+        <!--第五节-->
+        <view class="kb-card mg-8">
+ <label wx:for="{{week1}}" wx:for-item="K15">
+          <view style="height:30px;background:#7ac0a5" wx:if="{{zhouyi.jcxx =='9-11'||zhouyi.jcxx =='9-10'}}" class="mg-12 kb-card-content" bindtap="KP" data-room="{{ K15.skdd }}" data-kcmc="{{ K15.kcmc }}" data-js="{{ K15.rkjs }}" data-jcxx="{{K15.jcxx}}" data-skbjmc="{{K15.skbjmc}}" data-skzs="{{K15.skzs}}" data-xf="{{K15.xf}}"data-xq="{{K15.xq}}">
+            <text class="kb-card-place-words">{{ K15.kcmc }}</text>
+            <text class="kb-card-place-words">{{ K15.skdd }}</text>
+            <view class="kb-card-name">
+              <text class="kb-card-name-text"></text>
+            </view>
+          </view>
+
+          <view style="height:30px" wx:elif="{{ K15.kcmc == ' '}}" class="mg-12 hidekp"></view>
+          </label>
+        </view>
+      </view>
+
+      <!--周二-->
+      <view class="kb-cards-column" >
+
+        <view class="kb-card mg-8">
+      <label wx:for="{{week2}}" wx:for-item="K21">
+          <view style="height:30px;background:#7ac0a5" wx:if="{{K21.jcxx =='1-2' }}" class="mg-12 kb-card-content" bindtap="KP" data-room="{{ K21.skdd }}" data-kcmc="{{ K21.kcmc }}" data-js="{{ K21.rkjs }}" data-jcxx="{{K21.jcxx}}" data-skbjmc="{{K21.skbjmc}}" data-skzs="{{K21.skzs}}" data-xf="{{K21.xf}}"data-xq="{{K21.xq}}">
+            <text class="kb-card-place-words">{{ K21.kcmc }}</text>
+            <text class="kb-card-place-words">{{ K21.skdd }}</text>
+            <view class="kb-card-name">
+              <text class="kb-card-name-text"></text>
+            </view>
+          </view>
+          <view style="height:30px" wx:elif="{{ K21.kcmc == ' '}}" class="mg-12 hidekp"></view>
+     </label>
+        </view>
+
+        <view class="kb-card mg-8">
+        <label wx:for="{{week2}}" wx:for-item="K22">
+          <view style="height:30px;background:#e894b5" wx:if="{{K22.jcxx =='3-4'}}" class="mg-12 kb-card-content" bindtap="KP"data-room="{{ K22.skdd }}" data-kcmc="{{ K22.kcmc }}" data-js="{{ K22.rkjs }}" data-jcxx="{{K22.jcxx}}" data-skbjmc="{{K22.skbjmc}}" data-skzs="{{K22.skzs}}" data-xf="{{K22.xf}}"data-xq="{{K22.xq}}">
+            <text class="kb-card-place-words">{{ K22.kcmc }}</text>
+            <text class="kb-card-place-words">{{ K22.skdd }}</text>
+            <view class="kb-card-name">
+              <text class="kb-card-name-text"></text>
+            </view>
+          </view>
+          <view style="height:30px" wx:elif="{{ K22.kcmc == ' '}}" class="mg-12 hidekp"></view>
+          </label>
+        </view>
+
+        <view class="kb-card mg-8">
+        <label wx:for="{{week2}}" wx:for-item="K23">
+          <view style="height:30px;background:#b3a0d8" wx:if="{{K23.jcxx =='5-6'}}" class="mg-12 kb-card-content" bindtap="KP"data-room="{{ K23.skdd }}" data-kcmc="{{ K23.kcmc }}" data-js="{{ K23.rkjs }}" data-jcxx="{{K23.jcxx}}" data-skbjmc="{{K23.skbjmc}}" data-skzs="{{K23.skzs}}" data-xf="{{K23.xf}}"data-xq="{{K23.xq}}">
+            <text class="kb-card-place-words">{{ K23.kcmc }}</text>
+            <text class="kb-card-place-words">{{ K23.skdd }}</text>
+            <view class="kb-card-name">
+              <text class="kb-card-name-text"></text>
+            </view>
+          </view>
+          <view style="height:30px" wx:elif="{{ K23.kcmc == ' '}}" class="mg-12 hidekp"></view>
+           </label>
+        </view>
+
+        <view class="kb-card mg-8">
+        <label wx:for="{{week2}}" wx:for-item="K24">
+          <view style="height:30px;background:#f18a83" wx:if="{{K24.jcxx =='7-8' }}" class="mg-12 kb-card-content" bindtap="KP"data-room="{{ K24.skdd }}" data-kcmc="{{ K24.kcmc }}" data-js="{{ K24.rkjs }}" data-jcxx="{{K24.jcxx}}" data-skbjmc="{{K24.skbjmc}}" data-skzs="{{K24.skzs}}" data-xf="{{K24.xf}}"data-xq="{{K24.xq}}">
+           <text class="kb-card-place-words">{{ K24.kcmc }}</text>
+            <text class="kb-card-place-words">{{ K24.skdd }}</text>
+            <view class="kb-card-name">
+              <text class="kb-card-name-text"></text>
+            </view>
+          </view>
+          <view style="height:30px" wx:elif="{{K24.kcmc == ''}}" class="mg-12 hidekp"></view>
+           </label>
+        </view>
+
+        <view class="kb-card mg-8">
+      <label wx:for="{{week2}}" wx:for-item="K25">
+          <view style="height:30px;background:#759ae1" wx:if="{{K25.jcxx =='9-11'}}" class="mg-12 kb-card-content" bindtap="KP"data-room="{{ K25.skdd }}" data-kcmc="{{ K25.kcmc }}" data-js="{{ K25.rkjs }}" data-jcxx="{{K25.jcxx}}" data-skbjmc="{{K25.skbjmc}}" data-skzs="{{K25.skzs}}" data-xf="{{K25.xf}}"data-xq="{{K25.xq}}">
+            <text class="kb-card-place-words">{{ K25.kcmc }}</text>
+            <text class="kb-card-place-words">{{ K25.skdd }}</text>
+            <view class="kb-card-name">
+              <text class="kb-card-name-text"></text>
+            </view>
+          </view>
+          <view style="height:30px" wx:elif="{{ K25.kcmc == ' '}}" class="mg-12 hidekp"></view>
+        </label>
+        </view>
+     
+      </view>
+
+      <!--周三-->
+      <view class="kb-cards-column">
+        <view class="kb-card mg-8">
+        <label wx:for="{{week3}}" wx:for-item="K31">
+          <view style="height:30px;background:#b0a2d0" wx:if="{{K31.jcxx =='1-2'}}" class="mg-12 kb-card-content" bindtap="KP"data-room="{{ K31.skdd }}" data-kcmc="{{ K31.kcmc }}" data-js="{{ K31.rkjs }}" data-jcxx="{{K31.jcxx}}" data-skbjmc="{{K31.skbjmc}}" data-skzs="{{K31.skzs}}" data-xf="{{K31.xf}}"data-xq="{{K31.xq}}">
+           <text class="kb-card-place-words">{{ K31.kcmc }}</text>
+            <text class="kb-card-place-words">{{ K31.skdd }}</text>
+            <view class="kb-card-name">
+              <text class="kb-card-name-text"></text>
+            </view>
+          </view>
+          <view style="height:30px" wx:elif="{{K31.kcmc == ' '}}" class="mg-12 hidekp"></view>
+          </label>
+        </view>
+
+        <view class="kb-card mg-8">
+        <label wx:for="{{week3}}" wx:for-item="K32">
+          <view style="height:30px;background:#fb9798" wx:if="{{ K32.jcxx =='3-4'}}" class="mg-12 kb-card-content" bindtap="KP" data-room="{{ K32.skdd }}" data-kcmc="{{ K32.kcmc }}" data-js="{{ K32.rkjs }}" data-jcxx="{{K32.jcxx}}" data-skbjmc="{{K32.skbjmc}}" data-skzs="{{K32.skzs}}" data-xf="{{K32.xf}}"data-xq="{{K32.xq}}">
+            <text class="kb-card-place-words">{{ K32.kcmc }}</text>
+            <text class="kb-card-place-words">{{ K32.skdd }}</text>
+            <view class="kb-card-name">
+              <text class="kb-card-name-text"></text>
+            </view>
+          </view>
+          <view style="height:30px" wx:elif="{{ K32.kcmc == ' '}}" class="mg-12 hidekp"></view>
+           </label>
+        </view>
+
+        <view class="kb-card mg-8">
+        <label wx:for="{{week3}}" wx:for-item="K33">
+          <view style="height:30px;background:#f5c774" wx:if="{{K33.jcxx =='5-6'}}" class="mg-12 kb-card-content" bindtap="KP" data-room="{{ K33.skdd }}" data-kcmc="{{ K33.kcmc }}" data-js="{{ K33.rkjs }}" data-jcxx="{{K33.jcxx}}" data-skbjmc="{{K33.skbjmc}}" data-skzs="{{K33.skzs}}" data-xf="{{K33.xf}}"data-xq="{{K33.xq}}">
+            <text class="kb-card-place-words">{{ K33.kcmc }}</text>
+            <text class="kb-card-place-words">{{ K33.skdd }}</text>
+            <view class="kb-card-name">
+              <text class="kb-card-name-text"></text>
+            </view>
+          </view>
+          <view style="height:30px" wx:elif="{{K33.kcmc == ' '}}" class="mg-12 hidekp"></view>
+           </label>
+        </view>
+
+        <view class="kb-card mg-8">
+        <label wx:for="{{week3}}" wx:for-item="K34">
+          <view style="height:30px;background:#8faadf" wx:if="{{ K34.jcxx =='7-8' }}" class="mg-12 kb-card-content" bindtap="KP" data-room="{{ K34.skdd }}" data-kcmc="{{ K34.kcmc }}" data-js="{{ K34.rkjs }}" data-jcxx="{{K34.jcxx}}" data-skbjmc="{{K34.skbjmc}}" data-skzs="{{K34.skzs}}" data-xf="{{K34.xf}}"data-xq="{{K34.xq}}">
+           <text class="kb-card-place-words">{{ K34.kcmc }}</text>
+            <text class="kb-card-place-words">{{ K34.skdd }}</text>
+            <view class="kb-card-name">
+              <text class="kb-card-name-text"></text>
+            </view>
+          </view>
+          <view style="height:30px" wx:elif="{{ K34.kcmc == ' '}}" class="mg-12 hidekp"></view>
+           </label>
+        </view>
+
+        <view class="kb-card mg-8">
+        <label wx:for="{{week3}}" wx:for-item="K35">
+          <view style="height:30px;background:#e693b5" wx:if="{{K35.jcxx =='9-11'||K35.jcxx =='9-10' }}" class="mg-12 kb-card-content" bindtap="KP" data-room="{{ K35.skdd }}" data-kcmc="{{ K35.kcmc }}" data-js="{{ K35.rkjs }}" data-jcxx="{{K35.jcxx}}" data-skbjmc="{{K35.skbjmc}}" data-skzs="{{K35.skzs}}" data-xf="{{K35.xf}}"data-xq="{{K35.xq}}">
+           <text class="kb-card-place-words">{{ K35.kcmc }}</text>
+            <text class="kb-card-place-words">{{ K35.skdd }}</text>
+            <view class="kb-card-name">
+              <text class="kb-card-name-text"></text>
+            </view>
+          </view>
+          <view style="height:30px" wx:elif="{{ K35.kcmc == ' '}}" class="mg-12 hidekp"></view>
+           </label>
+        </view>
+      </view>
+
+      <!--周四-->
+      <view class="kb-cards-column">
+        <view class="kb-card mg-8">
+        <label wx:for="{{week4}}" wx:for-item="K41">
+          <view style="height:30px;background:#f7c672" wx:if="{{ K41.jcxx =='1-2'}}" class="mg-12 kb-card-content" bindtap="KP"  data-room="{{ K41.skdd }}" data-kcmc="{{ K41.kcmc }}" data-js="{{ K41.rkjs }}" data-jcxx="{{K41.jcxx}}" data-skbjmc="{{K41.skbjmc}}" data-skzs="{{K41.skzs}}" data-xf="{{K41.xf}}"data-xq="{{K41.xq}}">
+            <text class="kb-card-place-words">{{ K41.kcmc }}</text>
+            <text class="kb-card-place-words">{{ K41.skdd }}</text>
+            <view class="kb-card-name">
+              <text class="kb-card-name-text"></text>
+            </view>
+          </view>
+          <view style="height:30px" wx:elif="{{K41.kcmc == ' '}}" class="mg-12 hidekp"></view>
+          </label>
+        </view>
+
+        <view class="kb-card mg-8">
+         <label wx:for="{{week4}}" wx:for-item="K42">
+          <view style="height:30px;background:#5dbee0" wx:if="{{ K42.jcxx =='3-4' }}" class="mg-12 kb-card-content" bindtap="KP" data-room="{{ K42.skdd }}" data-kcmc="{{ K42.kcmc }}" data-js="{{ K42.rkjs }}" data-jcxx="{{K42.jcxx}}" data-skbjmc="{{K42.skbjmc}}" data-skzs="{{K42.skzs}}" data-xf="{{K42.xf}}"data-xq="{{K42.xq}}">
+            <text class="kb-card-place-words">{{ K42.kcmc }}</text>
+            <text class="kb-card-place-words">{{ K42.skdd }}</text>
+            <view class="kb-card-name">
+              <text class="kb-card-name-text"></text>
+            </view>
+          </view>
+          <view style="height:30px" wx:elif="{{K42.kcmc == ' '}}" class="mg-12 hidekp"></view>
+            </label>
+        </view>
+
+        <view class="kb-card mg-8">
+         <label wx:for="{{week4}}" wx:for-item="K43">
+          <view style="height:30px;background:#b3a0d8" wx:if="{{K43.jcxx =='5-6'}}" class="mg-12 kb-card-content" bindtap="KP" data-room="{{ K43.skdd }}" data-kcmc="{{ K43.kcmc }}" data-js="{{ K43.rkjs }}"data-jcxx="{{K43.jcxx}}" data-skbjmc="{{K43.skbjmc}}" data-skzs="{{K43.skzs}}" data-xf="{{K43.xf}}"data-xq="{{K43.xq}}">
+            <text class="kb-card-place-words">{{ K43.kcmc }}</text>
+            <text class="kb-card-place-words">{{ K43.skdd }}</text>
+            <view class="kb-card-name">
+              <text class="kb-card-name-text"></text>
+            </view>
+          </view>
+          <view style="height:30px" wx:elif="{{K43.kcmc == ' '}}" class="mg-12 hidekp"></view>
+            </label>
+        </view>
+
+        <view class="kb-card mg-8">
+         <label wx:for="{{week4}}" wx:for-item="K44">
+          <view style="height:30px;background:#67c0e2" wx:if="{{K44.jcxx =='7-8'}}" class="mg-12 kb-card-content" bindtap="KP" data-room="{{ K44.skdd }}" data-kcmc="{{ K44.kcmc }}" data-js="{{ K44.rkjs }}"data-jcxx="{{K44.jcxx}}" data-skbjmc="{{K44.skbjmc}}" data-skzs="{{K44.skzs}}" data-xf="{{K44.xf}}"data-xq="{{K44.xq}}">
+            <text class="kb-card-place-words">{{ K44.kcmc }}</text>
+            <text class="kb-card-place-words">{{ K44.skdd }}</text>
+            <view class="kb-card-name">
+              <text class="kb-card-name-text"></text>
+            </view>
+          </view>
+          <view style="height:30px" wx:elif="{{ K44.kcmc == ' '}}" class="mg-12 hidekp"></view>
+            </label>
+        </view>
+
+        <view class="kb-card mg-8">
+         <label wx:for="{{week4}}" wx:for-item="K45">
+          <view style="height:30px;background:#86a1d6" wx:if="{{ K45.jcxx =='9-11'||K45.jcxx =='9-10'}}" class="mg-12 kb-card-content" bindtap="KP" data-room="{{ K45.skdd }}" data-kcmc="{{ K45.kcmc }}" data-js="{{ K45.rkjs }}"data-jcxx="{{K45.jcxx}}" data-skbjmc="{{K45.skbjmc}}" data-skzs="{{K45.skzs}}" data-xf="{{K45.xf}}"data-xq="{{K45.xq}}">
+            <text class="kb-card-place-words">{{ K45.kcmc }}</text>
+            <text class="kb-card-place-words">{{ K45.skdd }}</text>
+            <view class="kb-card-name">
+              <text class="kb-card-name-text"></text>
+            </view>
+          </view>
+          <view style="height:30px" wx:elif="{{ K45.kcmc == ' '}}" class="mg-12 hidekp"></view>
+            </label>
+        </view>
+      </view>
+
+
+      <!--周五-->
+      <view class="kb-cards-column" >
+        <view class="kb-card mg-8">
+        <label wx:for="{{week5}}" wx:for-item="K51">
+          <view style="height:30px;background:#a7ce67" wx:if="{{ K51.jcxx =='1-2'}}" class="mg-12 kb-card-content" bindtap="KP" data-room="{{ K51.skdd }}" data-kcmc="{{ K51.kcmc }}" data-js="{{ K51.rkjs }}"data-jcxx="{{K51.jcxx}}" data-skbjmc="{{K51.skbjmc}}" data-skzs="{{K51.skzs}}" data-xf="{{K51.xf}}"data-xq="{{K51.xq}}">
+            <text class="kb-card-place-words">{{ K51.kcmc }}</text>
+            <text class="kb-card-place-words">{{ K51.skdd }}</text>
+            <view class="kb-card-name">
+              <text class="kb-card-name-text"></text>
+            </view>
+          </view>
+          <view style="height:30px" wx:elif="{{ K51.kcmc == ' '}}" class="mg-12 hidekp"></view>
+          </label>
+        </view>
+
+        <view class="kb-card mg-8">
+        <label wx:for="{{week5}}" wx:for-item="K52">
+          <view style="height:30px;background:#8aabe4" wx:if="{{ K52.jcxx =='3-4'}}" class="mg-12 kb-card-content" bindtap="KP" data-room="{{ K52.skdd }}" data-kcmc="{{ K52.kcmc }}" data-js="{{ K52.rkjs }}"data-jcxx="{{K52.jcxx}}" data-skbjmc="{{K52.skbjmc}}" data-skzs="{{K52.skzs}}" data-xf="{{K52.xf}}"data-xq="{{K52.xq}}">
+            <text class="kb-card-place-words">{{ K52.kcmc }}</text>
+            <text class="kb-card-place-words">{{ K52.skdd }}</text>
+            <view class="kb-card-name">
+              <text class="kb-card-name-text"></text>
+            </view>
+          </view>
+          <view style="height:30px" wx:elif="{{K52.kcmc == ' '}}" class="mg-12 hidekp"></view>
+            </label>
+        </view>
+
+        <view class="kb-card mg-8">
+        <label wx:for="{{week5}}" wx:for-item="K53">
+          <view style="height:30px;background:#7bc1a5" wx:if="{{K53.jcxx =='5-6' }}" class="mg-12 kb-card-content" bindtap="KP" data-room="{{ K53.skdd }}" data-kcmc="{{ K53.kcmc }}" data-js="{{ K53.rkjs }}"data-jcxx="{{K53.jcxx}}" data-skbjmc="{{K53.skbjmc}}" data-skzs="{{K53.skzs}}" data-xf="{{K53.xf}}"data-xq="{{K53.xq}}">
+            <text class="kb-card-place-words">{{ K53.kcmc }}</text>
+            <text class="kb-card-place-words">{{ K53.skdd }}</text>
+            <view class="kb-card-name">
+              <text class="kb-card-name-text"></text>
+            </view>
+          </view>
+          <view style="height:30px" wx:elif="{{ K53.kcmc == ' '}}" class="mg-12 hidekp"></view>
+            </label>
+        </view>
+
+        <view class="kb-card mg-8">
+        <label wx:for="{{week5}}" wx:for-item="K54">
+          <view style="height:30px;background:#86a1d6" wx:if="{{K54.jcxx =='7-8' }}" class="mg-12 kb-card-content" bindtap="KP" data-room="{{ K54.skdd }}" data-kcmc="{{ K54.kcmc }}" data-js="{{ K54.rkjs }}"data-jcxx="{{K54.jcxx}}" data-skbjmc="{{K54.skbjmc}}" data-skzs="{{K54.skzs}}" data-xf="{{K54.xf}}"data-xq="{{K54.xq}}">
+            <text class="kb-card-place-words">{{ K54.kcmc }}</text>
+            <text class="kb-card-place-words">{{ K54.skdd }}</text>
+            <view class="kb-card-name">
+              <text class="kb-card-name-text"></text>
+            </view>
+          </view>
+          <view style="height:30px" wx:elif="{{ K54.kcmc == ' '}}" class="mg-12 hidekp"></view>
+            </label>
+        </view>
+
+        <view class="kb-card mg-8">
+        <label wx:for="{{week5}}" wx:for-item="K55">
+          <view style="height:30px;background:#e37399" wx:if="{{ K55.jcxx =='9-11'||K55.jcxx =='9-10' }}" class="mg-12 kb-card-content" bindtap="KP" data-room="{{ K55.skdd }}" data-kcmc="{{ K55.kcmc }}" data-js="{{ K55.rkjs }}"data-jcxx="{{K55.jcxx}}" data-skbjmc="{{K55.skbjmc}}" data-skzs="{{K55.skzs}}" data-xf="{{K55.xf}}"data-xq="{{K55.xq}}">
+            <text class="kb-card-place-words">{{ K55.kcmc }}</text>
+            <text class="kb-card-place-words">{{ K55.skdd }}</text>
+            <view class="kb-card-name">
+              <text class="kb-card-name-text"></text>
+            </view>
+          </view>
+          <view style="height:30px" wx:elif="{{K55.kcmc == ' '}}" class="mg-12 hidekp"></view>
+            </label>
+        </view>
+      </view>
+
+      <!--周六-->
+      <view class="kb-cards-column" >
+        <view class="kb-card mg-8">
+        <label wx:for="{{week6}}" wx:for-item="K61">
+          <view style="height:30px" wx:if="{{ K61.jcxx =='1-2'}}" class="mg-12 kb-card-content" bindtap="KP"data-room="{{ K61.skdd }}" data-kcmc="{{ K61.kcmc }}" data-js="{{ K61.rkjs }}"data-jcxx="{{K61.jcxx}}" data-skbjmc="{{K61.skbjmc}}" data-skzs="{{K61.skzs}}" data-xf="{{K61.xf}}"data-xq="{{K61.xq}}">
+           <text class="kb-card-place-words">{{ K61.kcmc }}</text>
+            <text class="kb-card-place-words">{{ K61.skdd }}</text>
+            <view class="kb-card-name">
+              <text class="kb-card-name-text"></text>
+            </view>
+          </view>
+          <view style="height:30px" wx:elif="{{ K61.kcmc == ' '}}" class="mg-12 hidekp"></view>
+          </label>
+        </view>
+
+        <view class="kb-card mg-8">
+         <label wx:for="{{week6}}" wx:for-item="K62">
+          <view style="height:30px" wx:if="{{ K62.jcxx =='3-4'}}" class="mg-12 kb-card-content" bindtap="KP" data-room="{{ K62.skdd }}" data-kcmc="{{ K62.kcmc }}" data-js="{{ K62.rkjs }}"data-jcxx="{{K62.jcxx}}" data-skbjmc="{{K62.skbjmc}}" data-skzs="{{K62.skzs}}" data-xf="{{K62.xf}}"data-xq="{{K62.xq}}">
+            <text class="kb-card-place-words">{{ K62.kcmc }}</text>
+            <text class="kb-card-place-words">{{ K62.skdd }}</text>
+            <view class="kb-card-name">
+              <text class="kb-card-name-text"></text>
+            </view>
+          </view>
+          <view style="height:30px" wx:elif="{{K62.kcmc == ' '}}" class="mg-12 hidekp"></view>
+          </label>
+        </view>
+
+        <view class="kb-card mg-8">
+         <label wx:for="{{week6}}" wx:for-item="K63">
+          <view style="height:30px" wx:if="{{ K63.jcxx =='5-6' }}" class="mg-12 kb-card-content" bindtap="KP" data-room="{{ K63.skdd }}" data-kcmc="{{ K63.kcmc }}" data-js="{{ K63.rkjs }}"data-jcxx="{{K63.jcxx}}" data-skbjmc="{{K63.skbjmc}}" data-skzs="{{K63.skzs}}" data-xf="{{K63.xf}}"data-xq="{{K63.xq}}">
+            <text class="kb-card-place-words">{{ K63.kcmc }}</text>
+            <text class="kb-card-place-words">{{ K63.skdd }}</text>
+            <view class="kb-card-name">
+              <text class="kb-card-name-text"></text>
+            </view>
+          </view>
+          <view style="height:30px" wx:elif="{{ K63.kcmc == ' '}}" class="mg-12 hidekp"></view>
+          </label>
+        </view>
+
+        <view class="kb-card mg-8">
+         <label wx:for="{{week6}}" wx:for-item="K64">
+          <view style="height:30px" wx:if="{{K64.jcxx =='7-8'}}" class="mg-12 kb-card-content" bindtap="KP" data-room="{{ K64.skdd }}" data-kcmc="{{ K64.kcmc }}" data-js="{{ K64.rkjs }}"data-jcxx="{{K64.jcxx}}" data-skbjmc="{{K64.skbjmc}}" data-skzs="{{K64.skzs}}" data-xf="{{K64.xf}}"data-xq="{{K64.xq}}">
+            <text class="kb-card-place-words">{{ K64.kcmc }}</text>
+            <text class="kb-card-place-words">{{ K64.skdd }}</text>
+            <view class="kb-card-name">
+              <text class="kb-card-name-text"></text>
+            </view>
+          </view>
+          <view style="height:30px" wx:elif="{{K64.kcmc == ' '}}" class="mg-12 hidekp"></view>
+          </label>
+        </view>
+
+        <view class="kb-card mg-8">
+         <label wx:for="{{week6}}" wx:for-item="K65">
+          <view style="height:30px" wx:if="{{ K65.jcxx =='9-11'|| K65.jcxx =='9-11'}}" class="mg-12 kb-card-content" bindtap="KP"data-room="{{ K65.skdd }}" data-kcmc="{{ K65.kcmc }}" data-js="{{ K65.rkjs }}"data-jcxx="{{K65.jcxx}}" data-skbjmc="{{K65.skbjmc}}" data-skzs="{{K65.skzs}}" data-xf="{{K65.xf}}"data-xq="{{K65.xq}}">
+            <text class="kb-card-place-words">{{ K65.kcmc }}</text>
+            <text class="kb-card-place-words">{{ K65.skdd }}</text>
+            <view class="kb-card-name">
+              <text class="kb-card-name-text"></text>
+            </view>
+          </view>
+          <view style="height:30px" wx:elif="{{ K65.kcmc == ' '}}" class="mg-12 hidekp"></view>
+          </label>
+        </view>
+      </view>
+
+      <!--周日-->
+      <view class="kb-cards-column" >
+        <view class="kb-card mg-8">
+        <label wx:for="{{week7}}" wx:for-item="K71">
+          <view style="height:30px" wx:if="{{ K65.jcxx =='1-2' }}" class="mg-12 kb-card-content" bindtap="KP" data-room="{{ K71.skdd }}" data-kcmc="{{ K71.kcmc }}" data-js="{{ K71.rkjs }}"data-jcxx="{{K71.jcxx}}" data-skbjmc="{{K71.skbjmc}}" data-skzs="{{K71.skzs}}" data-xf="{{K71.xf}}"data-xq="{{K71.xq}}">
+            <text class="kb-card-place-words">{{ K71.kcmc }}</text>
+            <text class="kb-card-place-words">{{ K71.skdd }}</text>
+            <view class="kb-card-name">
+              <text class="kb-card-name-text"></text>
+            </view>
+          </view>
+          <view style="height:30px" wx:elif="{{K71.kcmc == ' '}}" class="mg-12 hidekp"></view>
+           </label>
+        </view>
+
+        <view class="kb-card mg-8">
+        <label wx:for="{{week7}}" wx:for-item="K72">
+          <view style="height:30px" wx:if="{{K65.jcxx =='3-4' }}" class="mg-12 kb-card-content" bindtap="KP" data-room="{{ K72.skdd }}" data-kcmc="{{ K72.kcmc }}" data-js="{{ K72.rkjs }}"data-jcxx="{{K72.jcxx}}" data-skbjmc="{{K72.skbjmc}}" data-skzs="{{K72.skzs}}" data-xf="{{K72.xf}}"data-xq="{{K72.xq}}">
+           <text class="kb-card-place-words">{{ K72.kcmc }}</text>
+            <text class="kb-card-place-words">{{ K72.skdd }}</text>
+            <view class="kb-card-name">
+              <text class="kb-card-name-text"></text>
+            </view>
+          </view>
+          <view style="height:30px" wx:elif="{{ K72.kcmc == ' '}}" class="mg-12 hidekp"></view>
+           </label>
+        </view>
+
+        <view class="kb-card mg-8">
+        <label wx:for="{{week7}}" wx:for-item="K73">
+          <view style="height:30px" wx:if="{{ K65.jcxx =='5-6' }}" class="mg-12 kb-card-content" bindtap="KP" data-room="{{ K73.skdd }}" data-kcmc="{{ K73.kcmc }}" data-js="{{ K73.rkjs }}"data-jcxx="{{K73.jcxx}}" data-skbjmc="{{K73.skbjmc}}" data-skzs="{{K73.skzs}}" data-xf="{{K73.xf}}"data-xq="{{K73.xq}}">
+           <text class="kb-card-place-words">{{ K73.kcmc }}</text>
+            <text class="kb-card-place-words">{{ K73.skdd }}</text>
+            <view class="kb-card-name">
+              <text class="kb-card-name-text"></text>
+            </view>
+          </view>
+          <view style="height:30px" wx:elif="{{ K73.kcmc == ' '}}" class="mg-12 hidekp"></view>
+           </label>
+        </view>
+
+        <view class="kb-card mg-8">
+        <label wx:for="{{week7}}" wx:for-item="K74">
+          <view style="height:30px" wx:if="{{ K65.jcxx =='7-8' }}" class="mg-12 kb-card-content" bindtap="KP" data-room="{{ K74.skdd }}" data-kcmc="{{ K74.kcmc }}" data-js="{{ K74.rkjs }}"data-jcxx="{{K74.jcxx}}" data-skbjmc="{{K74.skbjmc}}" data-skzs="{{K74.skzs}}" data-xf="{{K74.xf}}"data-xq="{{K74.xq}}">
+           <text class="kb-card-place-words">{{ K74.kcmc }}</text>
+            <text class="kb-card-place-words">{{ K74.skdd }}</text>
+            <view class="kb-card-name">
+              <text class="kb-card-name-text"></text>
+            </view>
+          </view>
+          <view style="height:30px" wx:elif="{{ K74.kcmc == ' '}}" class="mg-12 hidekp"></view>
+           </label>
+        </view>
+
+        <view class="kb-card mg-8">
+        <label wx:for="{{week7}}" wx:for-item="K75">
+          <view style="height:30px" wx:if="{{ K65.jcxx =='9-11'||K65.jcxx =='9-11' }}" class="mg-12 kb-card-content" bindtap="KP" data-room="{{ K75.skdd }}" data-kcmc="{{ K75.kcmc }}" data-js="{{ K75.rkjs }}"data-jcxx="{{K75.jcxx}}" data-skbjmc="{{K75.skbjmc}}" data-skzs="{{K75.skzs}}" data-xf="{{K75.xf}}"data-xq="{{K75.xq}}">
+            <text class="kb-card-place-words">{{ K75.kcmc }}</text>
+            <text class="kb-card-place-words">{{ K75.skdd }}</text>
+            <view class="kb-card-name">
+              <text class="kb-card-name-text"></text>
+            </view>
+          </view>
+          <view style="height:30px" wx:elif="{{ K75.kcmc == ' '}}" class="mg-12 hidekp"></view>
+           </label>
+        </view>
+      </view>
+
+
+    </view>
+
+
+  </scroll-view>
+
+  <view class="kb-info-ctn" catchtouchmove="catchMoveDetail">
+    <view class="section">
+      <picker mode="selector" bindchange="bindPickerChange" range="{{xqweek}}" range-key="name">
+        <view class="kb-info-title">
+          {{xqweek[keyzhi].name}}<image class="pickerimg" src="/imgs/xialakb.png"></image>
+        </view>
+      </picker>
+    </view>
+  </view>
+
+
+
+
+</view>

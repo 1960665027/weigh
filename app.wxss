@@ -1,0 +1,68 @@
+/* pages/login/login.wxss */
+.containerk{
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+
+.container{
+  padding: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  border-shadow: 1px 1px #0099CC;
+}
+
+
+.row button{
+  padding: 0 2rem;
+}
+.touxiang .imgyac{
+  display: flex;
+  margin: 50rpx auto;
+  width: 100px; 
+  height: 100px; 
+}
+.anglesList{ 
+  display:flex;
+  align-items:center;
+  padding:25rpx 25rpx 25rpx 0;
+  margin-left:25rpx;
+  border-bottom:1px solid #f1f1f1; 
+} 
+
+.anglesList .anglesNavigator{ 
+  display:flex;
+  align-items:center;
+  flex-grow:1;
+} 
+
+.anglesList .imgBox{ 
+  flex:0 0 110rpx;
+  width:110rpx; 
+  height:110rpx; 
+  border-radius:50%; 
+  padding:5rpx; 
+  margin-right:20rpx; 
+  background:linear-gradient(#fff,#6a6969); 
+} 
+
+.anglesList .imgBox image{ 
+  width:110rpx; 
+  height:110rpx; 
+  border-radius:50%; 
+} 
+
+.anglesList .textBox{ 
+  flex-grow:1;
+} 
+
+.anglesList text{ 
+  display:block; 
+  max-width:12em; 
+  overflow:hidden; 
+  white-space:nowrap; 
+  text-overflow:ellipsis; 
+}

@@ -1,0 +1,34 @@
+page{
+  background: #efefef;
+}
+.row{
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 1rpx solid #efefef;
+  border-radius: 0.3rem;
+  justify-content:space-between;
+  height:98rpx;
+  padding-right:3%;
+
+}
+.row .liang{
+  text-align: left;
+  margin-left: 30rpx;
+  
+}
+.row picker{
+ 
+  
+}
+.post{
+  margin-top: 30rpx
+}
+.row image{
+  width:25rpx;
+  height:30rpx;
+  padding-right: 18rpx;
+}
+.pickertext{
+  padding-right: 220rpx;
+}

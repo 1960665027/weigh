@@ -1,0 +1,13 @@
+<!--pages/aboutous/aboutous.wxml-->
+<view class="aboutous_wrap">
+    <view class="a_contant">
+        <image class="img_01" src="image/yac.png"></image>
+        <text style="text-align: center;">桂航大学生创新创业中心雅C团队提供</text>
+        <view class="line"></view>
+        
+    </view>
+</view>
+<rich-text nodes="{{nodes}}" bindtap="tap"></rich-text>
+<view class="shangbiao">
+   2016-2017 雅C团队版权所有
+</view>

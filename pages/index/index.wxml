@@ -1,0 +1,42 @@
+<view>
+  <loading hidden="{{!hidden}}">
+    加载中...
+  </loading>
+</view>
+
+<swiper indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="1000">
+
+  <block wx:for="{{imgUrls}}">
+    <swiper-item bindtap="goZhihiWeiList" data-c_userid="{{item.id}}">
+      <!--<image src="{{item}}" class="slide-image" />-->
+      <view class="slide-image" style="background-image:url( {{item.imgurl}} )"></view>
+    </swiper-item>
+  </block>
+</swiper>
+<view  stytle=" overflow-x: hidden; overflow-y: auto;">
+<view  class="item">
+    
+    <view class="item_left" class="top_image" bindtap='jwbindtap'>
+   
+        <image src="/imgs/jw.png" class="image"/>
+        <view class="mark" ><text class="text">教务系统</text></view>
+        
+    </view>
+    
+    <view class="item_right" class="top_image">
+    <navigator url="../kongjiaobd/kongjiaobd">
+        <image src="/imgs/kjs.png" class="image"/>
+        <view class="mark" ><text class="text">空教室</text></view>
+        </navigator>
+    </view>
+    <view class="item_right" class="top_image">
+    <navigator url="../ghrun/ghrun?code={{code}}">
+        <image src="/imgs/run.png" class="image"/>
+        <view class="mark" ><text class="text">桂航运动</text></view>
+        </navigator>
+    </view>
+    
+</view>
+<view class="dubuclass"><image class="dibu" src="/imgs/indexdb.jpg" mode="aspectFill"></image>
+</view>
+</view>

@@ -1,0 +1,49 @@
+/* pages/newsxq/newsxq.wxss */
+.news-items{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+.items{
+ display: flex;
+ padding: 20rpx 40rpx;
+
+}
+.poster{
+  margin-left: 50rpx;
+  width: 85%;
+
+  margin-bottom: 35rpx;
+}
+.mate{
+  flex: 1;
+  margin-bottom: 30rpx;
+}
+.title ,.zuozhe,.newsdate{
+  display: block;
+  margin-bottom: 14rpx;
+  text-align: center;
+}
+.title{
+  font-size: 50rpx;
+}
+.zuozhe{
+  font-size: 30rpx;
+  color: #c0c0c0;
+}
+.newsdate{
+  font-size: 30rpx;
+  color: #c0c0c0;
+
+}
+.content{
+  display: flex;
+ padding: 20rpx 40rpx;
+ line-height: 60rpx; 
+}
+.textcontent{
+  font-family: unset;
+            
+}

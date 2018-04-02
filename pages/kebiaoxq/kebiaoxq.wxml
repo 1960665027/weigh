@@ -1,0 +1,77 @@
+<view id="info">
+
+  
+     <!--分割线结束-->
+    <view class="form-item" style="margin-top:20rpx;">
+      <view class="form-left" style="margin-left:5rpx;">
+        <text>*</text>教师:</view>
+      <view class="form-right">
+         {{js}}
+      </view>
+    </view>
+   <!--分割线结束-->
+    <view class="form-item" style="margin-top:20rpx;" bindtap="makecallphone">
+      <view class="form-left" style="margin-left:5rpx;">
+        <text>*</text>课程名称:</view>
+      <view class="form-right" style="color:#0000ff">
+         {{kcmc}}
+      </view>
+    </view>
+     <!--分割线开始-->
+    <view style="width:100%;height:15rpx;background:#f1f1f1;"></view>
+     <!--分割线结束-->
+    <view class="form-item" style="margin-top:20rpx;">
+      <view class="form-left" style="margin-left:5rpx;">
+        <text>*</text>教室:</view>
+      <view class="form-right">
+         {{room}}
+      </view>
+    </view>
+      <!--分割线结束-->
+    <view class="form-item" style="margin-top:20rpx;">
+      <view class="form-left" style="margin-left:5rpx;">
+        <text>*</text>节次:</view>
+      <view class="form-right">
+         {{jcxx}}
+      </view>
+    </view>
+      <!--分割线结束-->
+    <view class="form-item" style="margin-top:20rpx;">
+      <view class="form-left" style="margin-left:5rpx;">
+        <text>*</text>周次:</view>
+      <view class="form-right">
+         {{skzs}}
+      </view>
+    </view>
+
+    <!--分割线开始-->
+    <view style="width:100%;height:15rpx;background:#f1f1f1;"></view>
+
+    <!--分割线结束-->
+    <view class="form-item" style="margin-top:20rpx;">
+      <view class="form-left" style="margin-left:5rpx;">
+        <text>*</text>校区:</view>
+      <view class="form-right">
+         {{xq}}
+      </view>
+    </view>
+    <!--分割线结束-->
+    <view class="form-item" style="margin-top:20rpx;">
+      <view class="form-left" style="margin-left:5rpx;">
+        <text>*</text>学分:</view>
+      <view class="form-right">
+         {{xf}}
+      </view>
+    </view>
+      <!--分割线结束-->
+    <view class="form-item" style="margin-top:20rpx;">
+      <view class="form-left" style="margin-left:5rpx;">
+        <text>*</text>班级:</view>
+      <view class="form-right">
+         {{skbjmc}}
+      </view>
+    </view>
+     <!--分割线开始-->
+
+  <!--info end-->
+</view>

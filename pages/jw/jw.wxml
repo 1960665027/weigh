@@ -1,0 +1,24 @@
+
+<!--小程序中没有列表元素，用view-->
+<view class="anglesList" bindtap="bindtapkb"> 
+    <view class="imgBox"> 
+      <image class="tubiao" src="/imgs/kb.jpg" mode="aspectFill"></image> 
+    </view> 
+    <view class="textBox"> 
+      <text class="name">快速查课表</text>
+    </view> 
+    
+    
+</view>
+<view class="anglesList"> 
+  <navigator url="../cj/cj?userId={{userId}}&passWord={{passWord}}" class="anglesNavigator"> 
+
+    <view class="imgBox"> 
+      <image class="tubiao" src="/imgs/cj.jpg" mode="aspectFill"></image> 
+    </view> 
+    <view class="textBox"> 
+      <text class="name">快速查成绩</text>
+    </view> 
+    </navigator>
+    
+</view>

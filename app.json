@@ -1,0 +1,44 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/login/login",
+    "pages/newsxq/newsxq",
+    "pages/jw/jw",
+    "pages/cj/cj",
+    "pages/kb/kb",
+    "pages/xy/xy",
+    "pages/mycenter/mycenter",
+    "pages/aboutous/aboutous",
+    "pages/opinion/opinion",
+    "pages/kebiaoxq/kebiaoxq",
+    "pages/kongjiao/kongjiao",
+    "pages/kongjiaobd/kongjiaobd",
+    "pages/ghrun/ghrun"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ff6633",
+    "navigationBarTitleText": "桂航课表",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "#ccc",
+    "borderStyle": "white",
+    "selectedColor": "#ef8d2c",
+    "backgroundColor": "#f6f6f6",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "imgs/nav_hui.png",
+        "selectedIconPath": "imgs/nav_hong.png"
+      },
+      {
+        "pagePath": "pages/mycenter/mycenter",
+        "iconPath": "imgs/index_hui.png",
+        "selectedIconPath": "imgs/index_hong.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

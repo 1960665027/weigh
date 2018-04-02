@@ -1,0 +1,28 @@
+<view>
+  <loading hidden="{{!hidden}}">
+    加载中...
+  </loading>
+</view>
+
+<view class="containerk">
+  <view class="nav_left">
+    <block wx:for="{{items}}">
+      <view class="nav_left_items {{curNav == index ? 'active' : ''}}" bindtap="switchRightTab" data-index="{{index}}" data-start="{{item.secStart}}" data-end="{{item.secEnd}}">{{item.secStart}}-{{item.secEnd}}节</view>
+    </block>
+  </view>
+  <view class="nav_right">
+    <view wx:if="{{itemsrigth.length}}">
+      <block wx:for="{{itemsrigth}}">
+        <view class="nav_right_items">
+         
+              <!--<image wx:if="{{item.picture}}" src="{{item.picture}}"></image>-->
+              <!--<image wx:else src="../../images/gift_icon.png"></image>-->
+              <image src="/imgs/lou.png"></image> <!--测试用-->
+              <text style="white-space: pre-wrap;">{{item}}</text>
+         
+        </view>
+      </block>
+    </view>
+    <view wx:else class="nodata">暂无数据</view>
+  </view>
+</view>

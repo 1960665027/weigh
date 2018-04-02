@@ -1,0 +1,17 @@
+<scroll-view class="news-items" scroll-y="true">
+    <label wx:for="{{datas}}">
+        <view class="items">
+       
+         <view class="mate">
+           <text class="title">{{item.titlebt}}</text>
+           <text class="zuozhe">{{item.zuozhe}}</text>
+           <text class="newsdate">{{item.data}}</text>
+         </view>
+        </view>
+          <image class="poster" src="{{item.imgurl}}"></image>
+          <view class="content">
+            <text class="textcontent">{{item.content1}}</text>
+          </view>
+            
+       </label>
+</scroll-view>

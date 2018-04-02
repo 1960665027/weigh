@@ -1,0 +1,45 @@
+<view class="container">
+<view class="touxiang">
+ <image class="imgyac" src="/imgs/yac.png"></image>
+</view>
+  <form bindsubmit="formSubmit">
+    <view class="row"> 
+ <text class="liang">周数</text><picker mode="selector" bindchange="bindPickerChangezs" range="{{xqweek}}" range-key="name"><text class="pickertext">{{xqweek[keyzhi].name}}</text>
+ <image src="/imgs/enter.png" ></image>
+        </picker>
+    </view>
+    
+        <view class="row">
+    <text class="liang">星期</text><picker mode="selector" range="{{xqarr}}" range-key="name" bindchange="bindPickerChangezsxq"><text class="pickertext" >{{xqarr[keyxq].name}}</text>
+    <image src="/imgs/enter.png" ></image>
+        </picker>
+       
+    </view>
+       <view class="row">
+    <text class="liang">校区</text><picker mode="selector" bindchange="PickerBindchangexiaoqu"range="{{xiaoqu}}" range-key="name"><text class="pickertext">{{xiaoqu[keyxiaoqu].name}}</text>
+     <image src="/imgs/enter.png" ></image>
+        </picker>
+    
+    </view>
+       <view class="row" wx:if="{{keyxiaoqu==0}}">
+    <text class="liang">教学楼</text>
+    <picker mode="selector" range="{{beixiao}}" range-key="name"bindchange="PickerBindchangenanlou">
+    <text class="pickertext">{{beixiao[keybeixiao].name}}</text>
+     <image src="/imgs/enter.png" ></image>
+        </picker>
+      
+    </view>
+     <view class="row" wx:if="{{keyxiaoqu==1}}">
+    <text class="liang">教学楼</text>
+    <picker mode="selector" range="{{nanxiao}}" range-key="name"bindchange="PickerBindchangebeilou">
+    <text class="pickertext">{{nanxiao[keynan].name}}</text>
+     <image src="/imgs/enter.png" ></image>
+        </picker>
+      
+    </view>
+    <view class="post">
+      <button type="primary" form-type="submit">一键查询</button>
+    </view>
+ 
+  </form>
+  </view>

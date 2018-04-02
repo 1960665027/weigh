@@ -1,0 +1,26 @@
+<view class="container">
+<view class="touxiang">
+ <image class="imgyac" src="/imgs/yac.png"></image>
+</view>
+  <form bindsubmit="formSubmit">
+    <view class="row">
+    <input type="text" name="userName" placeholder="请输入学号"value="{{userName}}" />
+    </view>
+    <view class="row">
+      <input type="password" name="passWord" placeholder="请输入密码"value="{{passWord}}"/>
+    </view>
+    <view class="post">
+      <button type="primary" form-type="submit">登陆</button>
+    </view>
+ 
+  </form>
+</view>
+<view class="classname">
+  <text class="yac">由雅C团队提供</text>
+</view>
+<view class="classname">
+  <text>查询表示同意</text>
+  <navigator url="../xy/xy">
+  <text class="xieyi">《用户服务协议》</text>
+  </navigator>
+</view>
