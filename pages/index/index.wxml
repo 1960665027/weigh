@@ -16,18 +16,18 @@
 <view  stytle=" overflow-x: hidden; overflow-y: auto;">
 <view  class="item">
     
-    <view class="item_left" class="top_image" bindtap='jwbindtap'>
-   
+    <view class="item_left" class="top_image">
+    <navigator target="miniProgram" open-type="navigate" app-id="wxb4995992ead5661f" path="" extra-data="" version="release">
         <image src="/imgs/jw.png" class="image"/>
         <view class="mark" ><text class="text">教务系统</text></view>
-        
+        </navigator>
     </view>
     
     <view class="item_right" class="top_image">
-    <navigator url="../kongjiaobd/kongjiaobd">
-        <image src="/imgs/kjs.png" class="image"/>
-        <view class="mark" ><text class="text">空教室</text></view>
-        </navigator>
+    <navigator target="miniProgram" open-type="navigate" app-id="wx052e4cb7e9fc8e61" path="" extra-data="" version="release">
+        <image src="/imgs/thlylogo.jpg" class="image"/>
+        <view class="mark" ><text class="text">泰吉驿途</text></view>
+    </navigator>
     </view>
     <view class="item_right" class="top_image">
     <navigator url="../ghrun/ghrun?code={{code}}">
