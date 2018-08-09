@@ -1,5 +1,7 @@
 /**index.wxss**/
-page{height:100%;
+page{
+  height:100%;
+  background: #f3f3f3;
 }
 .userinfo {
   display: flex;
@@ -36,7 +38,12 @@ height: 400rpx;
 .top_image{
     display: table-column
 }
-
+.item-body{
+  background: #fff;
+   overflow-x: hidden; 
+   overflow-y: auto;
+   margin-top: 10px;
+}
 .item {
   display: flex;
   flex-direction: row;
@@ -45,7 +52,7 @@ height: 400rpx;
   margin-left: 68rpx;
   margin-bottom: 30rpx;
   margin-right: 72rpx;
-  background-color: #fff;
+
   margin-top: 20rpx;
 }
 .item-left{
@@ -131,4 +138,8 @@ height: 400rpx;
   align-content: center;
   justify-content: center;
   text-align: center;
+}
+.ad-item{
+  position: fixed;
+  bottom: 0px;
 }

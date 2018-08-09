@@ -96,3 +96,7 @@ page{
 .list_box .bottom{
     margin-bottom: 60rpx;
 }
+.ad-item{
+  position: fixed;
+  bottom: 0px;
+}

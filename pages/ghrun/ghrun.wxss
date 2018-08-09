@@ -152,3 +152,6 @@ page{
 .likes_num{
   font-size:30rpx;
 }
+.ad-item{
+  margin-bottom: 20px;
+}

@@ -10,6 +10,7 @@
  </view>	 	
 </view>
 <!-- 封面图片结束 -->
+<ad class="ad-item" unit-id="adunit-29e82e9efa0b3a22"></ad>
 <!-- 我的数据开始 -->
 <view class="mydata data_list">
 	<view class="myinfobox">
@@ -26,6 +27,7 @@
 	</view>
 </view>
 <!-- 我的数据结束 -->
+
 <!-- 今日和本月数据切换 -->
 <view class="changetab">
 	<view class="thisday active" bindtap="showToday">今日排行</view>
